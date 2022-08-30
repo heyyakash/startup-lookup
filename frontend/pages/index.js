@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     const { pathname } = Router;
     const token = localStorage.getItem("authToken")
-    if (token) {
+    if (token!==null && token!==undefined) {
       Router.push("/main/profile")
     }
     else {

@@ -5,7 +5,7 @@ import {BiArrowBack} from 'react-icons/bi';
 const Navbar = ({data,page,setPage}) => {
   return (
     <nav className='grid place-items-center font-prosans'>
-        <div className="max-w-[1260px] w-full py-4 h-full border-b-[2px] border-black flex justify-between items-center">
+        <div className="w-full py-4 px-10 h-full border-b-[2px] border-black flex justify-between items-center">
             <div className='flex items-center gap-4'>
             <Link href = "/main/profile"><BiArrowBack className=' cursor-pointer hover:scale-125 text-2xl' /></Link>
             <h2 className='text-2xl font-bold'>{data?.startup?.name}</h2>

@@ -9,7 +9,7 @@ import Profile from './Profile'
 
 const Stats = ({data}) => {
   return (
-    <div className='flex font-prosans max-w-[1300px] flex-col gap-10 md:h-[100vh] p-4 mx-auto'>
+    <div className='flex font-prosans w-full px-10 flex-col gap-10 p-4 mx-auto'>
             <div className='flex gap-10 flex-[1]'>
                 <Inflow data = {data} />
                 <ProfitLoss data = {data} />

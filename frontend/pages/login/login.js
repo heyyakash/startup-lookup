@@ -3,8 +3,11 @@ import {RiLoginBoxFill} from 'react-icons/ri'
 import Link from 'next/link'
 import {login} from '../../functions/loginFunctions';
 import Router from 'next/router';
+import loading from '../../assets/reload.jpg';
+
 
 const Login = () => {
+    const [signIn,setSignIn] = useState(false);
     const[email,setEmail] = useState("");
     const[password,setPassword] = useState("");
     
@@ -18,10 +21,12 @@ const Login = () => {
     },[])
 
     const handleLogin = async(e)=>{
+      setSignIn(true);
       e.preventDefault();
       const res = await login({email,password});
       const {authToken} = res;
       localStorage.setItem("authToken",authToken);
+      setSignIn(false);
       Router.push('/main/profile')
     }
 
@@ -36,7 +41,7 @@ const Login = () => {
         <form onSubmit={(e)=>handleLogin(e)} className='flex my-4 flex-col gap-4 w-[300px]'>
           <input required type="email" placeholder='Email Address' id ="email" className='form-input' value = {email} onChange = {(e)=>setEmail(e.target.value)} name = "email" />
           <input required type="password" placeholder='Password' id ="password" className='form-input' value = {password} onChange = {(e)=>setPassword(e.target.value)} name = "email" />
-          <button type='submit' className='form-btn'>Login</button>
+          <button type='submit' className='form-btn'>{signIn?<img className='h-6' src="/loading.gif"  alt="loading" />:"Login"}</button>
         </form>
 
       </div>

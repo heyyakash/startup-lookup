@@ -5,11 +5,9 @@ import Category from '../../components/Profile/Category'
 const category = () => {
     return (
         <>
-            <>
-                <Profile>
-                    <Category />
-                </Profile>
-            </>
+            <Profile>
+                <Category />
+            </Profile>
         </>
     )
 }

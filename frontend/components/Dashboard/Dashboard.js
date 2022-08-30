@@ -37,11 +37,11 @@ const Dashboard = () => {
     }
     return (
         data.startup &&
-        <>
+        <div className='h-[90%] overflow-y-auto'>
             <Navbar page = {page} setPage = {setPage} data={data} />
             {page===1?<Stats data = {data} />:page===2?<Doc data = {data}/>:<Profile data= {data?.uid} />}
             
-        </>
+        </div>
     )
 }
 
