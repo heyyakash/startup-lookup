@@ -83,8 +83,8 @@ const CreateNew = () => {
 
     return (
         <>
-            <div className='h-[100vh] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 flex justify-center items-center'>
-                <div className='md:w-[500px] p-5 rounded-md h-[100vh] md:h-[80vh] overflow-auto w-full bg-white drop-shadow-xl flex justify-center items-center gap-4 flex-col'>
+            <div className='h-[100vh] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 flex justify-center w-full items-center'>
+                <div className='md:w-[500px] p-2 md:p-5 rounded-md h-[100vh] md:h-[80vh] overflow-auto w-full bg-white drop-shadow-xl flex justify-center items-center gap-4 flex-col'>
                     <MdCreate className='text-4xl text-purple-600' />
                     <h2 className='text-2xl font-semibold '>I am an..</h2>
                     <div className="flex flex-col md:flex-row p-4 w-[400px] gap-2">

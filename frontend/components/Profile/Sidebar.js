@@ -9,7 +9,8 @@ const Sidebar = ({ user }) => {
     return (
         user &&
         <>
-            <div className='h-[100vh] bg-black text-white font-prosans w-[250px]'>
+            <div className='h-[100vh] hidden md:block transitionall relative bg-black text-white font-prosans w-[250px]'>
+                {/* <div className='h-10 absolute bg-black rounded-full text-white -right-10 border-2 border-gray-900 w-10 '></div> */}
                 <Link href="/main/profile">
                     <div className='p-4 flex gap-3 cursor-pointer items-center'>
                         <img src="https://img.pixers.pics/pho_wat(s3:700/FO/63/91/03/87/700_FO63910387_43e639b32c99185b44f90b0aa7e06e46.jpg,700,696,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,646,jpg)/stickers-polygon-abstract-background-vector.jpg.jpg" alt="" className='h-8 w-8 rounded-full' />

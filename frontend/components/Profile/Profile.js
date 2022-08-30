@@ -29,7 +29,7 @@ const Profile = (props) => {
         setLoading(false);
     }
     if (loading) {
-        return <div className='h-[100vh] w-full grid place-items-center'>
+        return <div className='h-[90vh] w-full grid place-items-center'>
             <div className='grid h-[100vh] place-items-center'>
                 <span>
                     <span className="animate-ping absolute inline-flex p-10 rounded-full bg-sky-400 opacity-75">
@@ -41,7 +41,7 @@ const Profile = (props) => {
     }
     return (
         <>
-            <div className='flex'>
+            <div className='flex relative flex-col md:flex-row w-full '>
                 <Sidebar user={user} />
                 <div className='flex-[1] flex flex-col'>
                     <Topbar user ={user} data = {data}  />

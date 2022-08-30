@@ -12,7 +12,7 @@ const Topbar = ({ data ,user}) => {
         Router.push('/login/login')
     }
     return (
-        <div className='bg-white border-b-gray-300 border-[1px] h-[60px] flex justify-between p-4 items-center'>
+        <div className='bg-white hidden md:flex border-b-gray-300 border-[1px] h-[60px] justify-between p-4 items-center'>
             <div className='flex items-center gap-4'>
                 {/* <div className="px-2 flex items-center w-[250px] text-sm py-1 justify-between border-[1px] border-black rounded-[14px]">
                     <input type="text" placeholder='Search for Startups' className='border-none outline-none bg-transparent' />
