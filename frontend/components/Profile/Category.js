@@ -33,7 +33,7 @@ return (
     <>
         <div className='mt-10 px-5'>
             <h1 className='text-2xl font-extrabold font-prosansbold'>{category + " " + "Startups"}</h1>
-            <div className="flex flex-col md:flex-row gap-4 flex-wrap">
+            <div className="flex flex-col lg:flex-row gap-4 flex-wrap">
                 {startup?.startup?.map((element) => <Card name={element.name} key ={element.name} value="2.25Cr" type={element.type} />)}
             </div>
         </div>

@@ -56,13 +56,13 @@ const ProfitLoss = ({data}) => {
         data&&
         <>
             <div className='flex flex-col gap-3 flex-[1]'>
-                <div className='flex flex-col gap-3 flex-wrap'>
+                <div className='flex flex-col flex-wrap'>
                     <div className='flex justify-between'>
                         <h2 className='font-prosansbold text-2xl'>Profit and loss</h2>
-                        <span className='rounded-xl border-2 hidden transitionall px-2 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.6)] shadow-[5px_5px_0px_0px_rgba(0,0,0,0.6)] text-[.7rem] md:flex justify-center items-center dark-shadows'>1<sup>st</sup>Apr 2021 - 31<sup>st</sup>March 2022</span>
+                        <span className='rounded-xl border-2 hidden transitionall px-2 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.6)] shadow-[5px_5px_0px_0px_rgba(0,0,0,0.6)] text-[.7rem] lg:flex justify-center items-center dark-shadows'>1<sup>st</sup>Apr 2021 - 31<sup>st</sup>March 2022</span>
                     </div>
                     <p className='text-md'>income and expenses on</p>
-                    <div className='mt-4 my-4 md:p-4 rounded-xl transition-all w-full h-[230px] bg-black light-shadows'>
+                    <div className='mt-4 my-4 lg:p-4 rounded-xl transition-all w-full h-[230px] bg-black light-shadows'>
                         <div className='relative h-full w-full overflow-hidden'>
                             <Line options = {options} data={dataSets} />
                         </div>

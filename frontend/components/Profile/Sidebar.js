@@ -9,7 +9,7 @@ const Sidebar = ({ user }) => {
     return (
         user &&
         <>
-            <div className='h-[100vh] hidden md:block transitionall relative bg-black text-white font-prosans w-[250px]'>
+            <div className='h-full hidden lg:block transitionall relative bg-black text-white font-prosans w-[250px]'>
                 {/* <div className='h-10 absolute bg-black rounded-full text-white -right-10 border-2 border-gray-900 w-10 '></div> */}
                 <Link href="/main/profile">
                     <div className='p-4 flex gap-3 cursor-pointer items-center'>

@@ -4,10 +4,11 @@ import { getStartUps } from '../../functions/GetFunctions'
 import { getUser } from '../../functions/loginFunctions'
 import Topbar from './Topbar'
 import Router from 'next/router'
+import { useQuery } from 'react-query'
 
 const Profile = (props) => {
     const [user, setUser] = useState({})
-    const [data,setData] = useState({})
+    // const [data,setData] = useState({})
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         const token = localStorage.getItem('authToken')
@@ -19,13 +20,17 @@ const Profile = (props) => {
         
     }, [])
 
+
+    const {data,isError,isLoading} = useQuery('startups',getStartUps)
+
     const findUser = async () => {
         const token = localStorage.getItem("authToken")
         const res = await getUser(token)
         setUser(res);
-        const res2 = await getStartUps()
-        setData(res2);
-        console.log(res2);
+        localStorage.setItem("user",JSON.stringify(res));
+        // const res2 = await getStartUps()
+        // setData(res2);
+        // console.log(res2);
         setLoading(false);
     }
     if (loading) {
@@ -39,13 +44,16 @@ const Profile = (props) => {
             </div>
         </div>
     }
+    if(isLoading){
+        return <div className='h-[100vh] w-full grid place-items-center'>Loading..</div>
+    }
     return (
         <>
-            <div className='flex relative flex-col md:flex-row w-full '>
+            <div className='flex h-[100vh] '>
                 <Sidebar user={user} />
                 <div className='flex-[1] flex flex-col'>
                     <Topbar user ={user} data = {data}  />
-                    {cloneElement(props.children, { user: user ,data:data})}
+                    {cloneElement(props.children, { user: user ,data})}
                 </div>
             </div>
         </>

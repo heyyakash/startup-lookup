@@ -5,7 +5,7 @@ import { GrLogout } from 'react-icons/gr';
 import Router from 'next/router';
 import Link from 'next/link';
 
-const Topbar = ({ data ,user}) => {
+const Topbar = ({ data, user }) => {
 
     const logout = () => {
         localStorage.removeItem('authToken');
@@ -23,23 +23,23 @@ const Topbar = ({ data ,user}) => {
             </div>
 
             <div className='flex gap-3 items-center'>
-            {user?.payload.type==="User"?
-            <Link  href = "/form">
-            <div className='flex p-2 px-3 items-center cursor-pointer hover:bg-gray-100 gap-2'>
+                {user?.payload.type === "User" ?
+                    <Link href="/form">
+                        <div className='flex p-2 px-3 items-center cursor-pointer hover:bg-gray-100 gap-2'>
 
-                <p>Add Startup</p>
-            </div>
-            
-        </Link>:""}
-                
-                <span className='h-[30px] w-[1px] bg-black ml-4'></span>
-                    <div className='flex items-center'>
-                <div onClick={logout} className='flex p-2 px-3 items-center cursor-pointer hover:bg-gray-100 gap-2'>
-                    <GrLogout />
-                    <p>Log Out</p>
+                            <p>Add Startup</p>
+                        </div>
+
+                    </Link> : ""}
+
+                <span className='h-[30px] w-[1px] bg-black'></span>
+                <div className='flex items-center'>
+                    <div onClick={logout} className='flex p-2 px-3 items-center cursor-pointer hover:bg-gray-100 gap-2'>
+                        <GrLogout />
+                        <p>Log Out</p>
+                    </div>
                 </div>
             </div>
-        </div>
         </div >
 
     )

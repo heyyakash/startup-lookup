@@ -24,7 +24,7 @@ const Inflow = ({data}) => {
             <div className='flex flex-col flex-[1] gap-3 flex-wrap'>
                 <div className='flex justify-between'>
                     <h2 className='font-prosansbold text-2xl'>Cash flow</h2>
-                    <span className='rounded-xl hidden border-2 transitionall px-2 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.6)] shadow-[5px_5px_0px_0px_rgba(0,0,0,0.6)] text-[.7rem] md:flex justify-center items-center dark-shadows'>1<sup>st</sup>Apr 2021 - 31<sup>st</sup>March 2022</span>
+                    <span className='rounded-xl hidden border-2 transitionall px-2 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.6)] shadow-[5px_5px_0px_0px_rgba(0,0,0,0.6)] text-[.7rem] lg:flex justify-center items-center dark-shadows'>1<sup>st</sup>Apr 2021 - 31<sup>st</sup>March 2022</span>
                 </div>
                 <p className='text-md'>Cash comming in and out of this Business</p>
                 <div className='flex  gap-4 text-sm'>
@@ -41,18 +41,18 @@ const Inflow = ({data}) => {
                         <p>Inflow</p>
                     </div>
                 </div>
-                <div className='flex flex-col md:flex-row justify-between gap-4 mt-2 items-center md:mt-5'>
-                    <div className='flex flex-col  dark-shadows transitionall cursor-pointer rounded-xl justify-center items-center h-[170px] w-full md:w-[170px] bg-green-400'>
+                <div className='flex flex-col lg:flex-row justify-between gap-4 mt-2 items-center lg:mt-5'>
+                    <div className='flex flex-col  dark-shadows transitionall cursor-pointer rounded-xl justify-center items-center h-[170px] w-full lg:w-[170px] bg-green-400'>
                         <FiArrowDownLeft className='font-extrabold' />
                         <p className='text-[.8rem]'>Inflow</p>
                         <p className='text-xl font-bold'> &#8377; {data?.startup?.inflow}</p>
                     </div>
-                    <div className='flex flex-col dark-shadows transitionall cursor-pointer rounded-xl justify-center items-center h-[170px] w-full md:w-[170px] bg-purple-400'>
+                    <div className='flex flex-col dark-shadows transitionall cursor-pointer rounded-xl justify-center items-center h-[170px] w-full lg:w-[170px] bg-purple-400'>
                         <FiArrowUpRight className='font-extrabold' />
                         <p className='text-[.8rem]'>Outflow</p>
                         <p className='text-xl font-bold'> &#8377; {data?.startup?.outflow}</p>
                     </div>
-                    <div className='flex flex-col dark-shadows transitionall cursor-pointer rounded-xl justify-center items-center h-[170px] w-full md:w-[170px] bg-black text-white'>
+                    <div className='flex flex-col dark-shadows transitionall cursor-pointer rounded-xl justify-center items-center h-[170px] w-full lg:w-[170px] bg-black text-white'>
                         <FiArrowDownLeft className='font-extrabold' />
                         <p className='text-[.8rem]'>Net Charges</p>
                         <p className='text-xl font-bold'> &#8377; {data?.startup?.inflow-data?.startup?.outflow}</p>
