@@ -1,4 +1,4 @@
-const url = "https://startuplookup.herokuapp.com";
+const url = "https://startup-lookup-production.up.railway.app";
 // const url = "http://localhost:5500"
 
 export const createUser = async(payload)=>{
