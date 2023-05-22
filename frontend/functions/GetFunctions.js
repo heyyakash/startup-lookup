@@ -1,4 +1,4 @@
-const url = "https://startuplookup.herokuapp.com";
+const url = "startup-lookup-production.up.railway.app";
 
 export const getStartUps =async () => {
     try{
