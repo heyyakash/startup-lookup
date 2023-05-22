@@ -1,4 +1,4 @@
-const url = "startup-lookup-production.up.railway.app";
+const url = "https://startup-lookup-production.up.railway.app";
 
 export const getStartUps =async () => {
     try{
